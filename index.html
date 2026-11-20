@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="XYVER - Geometry Dash level rankings and player leaderboard.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>XYVER — Geometry Dash Rankings</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="icon1.png">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="brand" href="#" aria-label="XYVER Home">
+      <img class="brand-logo" src="./icon1.png" alt="XYVER Logo">
+      <span class="brand-copy">
+        <strong>XYVER</strong>
+        <small>Geometry Dash Extreme Demon List</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a class="active" href="#">Home</a>
+      <a href="#levels">Demon List</a>
+      <a href="players.html">Stats Viewer</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="login-button" href="login.html">Login</a>
+    </div>
+  </header>
+
+  <main class="page-layout">
+
+    <aside class="players-panel panel" id="players">
+      <div class="section-heading">
+        <img class="heading-image" src="./iconplayer.png" alt="">
+        <div>
+          <h2>Stats <span>Viewer</span></h2>
+          <p>The best players in the community.</p>
+        </div>
+      </div>
+
+      <ol class="player-list" id="player-list"></ol>
+
+      <a href="players.html" class="primary-button player-full-button">
+        View Full Stats leaderboard
+      </a>
+    </aside>
+
+    <section class="main-column">
+
+      <section class="hero panel" aria-labelledby="featured-title">
+        <div class="hero-art">
+          <span class="rank-badge">#1</span>
+          <iframe
+            id="featured-video"
+            src="https://www.youtube.com/embed/gB8slBPlOjc"
+            title="GRIEF Verification Preview"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="hero-info">
+          <p class="eyebrow" id="featured-rank-label">LATEST TOP 1</p>
+          <h1 id="featured-title">GRIEF</h1>
+          <p class="creator" id="featured-creator">by icedcave</p>
+
+          <div class="tags" id="featured-tags">
+            <span>Extreme Demon</span>
+            <span>XL</span>
+            <span>Fast-Paced</span>
+          </div>
+
+          <p class="description" id="featured-description">
+            The current number one level on the Pointercrate Demonlist.
+          </p>
+
+          <div class="hero-footer">
+            <div class="metric">
+              <strong id="featured-views">N/A</strong>
+              <small>Views</small>
+            </div>
+            <div class="metric">
+              <strong id="featured-likes">N/A</strong>
+              <small>Likes</small>
+            </div>
+            <a class="primary-button" id="featured-link"
+               href="https://www.youtube.com/watch?v=gB8slBPlOjc"
+               target="_blank" rel="noopener noreferrer">
+              View Verification ↗
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="level-details panel" id="level-details">
+        <button type="button" class="details-toggle" id="details-toggle"
+                aria-expanded="false">
+          See More Information
+        </button>
+        <div class="details-content" id="details-content" hidden>
+          <div id="level-information"></div>
+        </div>
+      </section>
+
+      <section class="levels-panel" id="levels">
+        <div class="levels-heading">
+          <div class="section-heading compact">
+            <img src="iconlist.png" alt="Level List" class="level-list-icon">
+            <div>
+              <h2 id="levels-title">Main Demon List</h2>
+              <p id="levels-subtitle">Ranks 1-5</p>
+            </div>
+          </div>
+
+          <div class="level-tools">
+            <input id="level-search" type="search"
+                   placeholder="Search level..." aria-label="Cari level">
+                   
+            <select id="sort-levels" aria-label="Urutkan level">
+              <option value="rank">Sort: Rank</option>
+              <option value="name">Sort: Name</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="level-list" id="level-list"></div>
+
+        <div class="pagination" id="pagination" aria-label="Navigasi halaman">
+          <button id="prev-page" type="button" aria-label="Halaman sebelumnya">‹</button>
+          <span id="page-label">Page 1 / 20</span>
+          <button id="next-page" type="button" aria-label="Halaman berikutnya">›</button>
+        </div>
+      </section>
+    </section>
+
+    <aside class="right-column">
+
+      <section class="featured-panel panel">
+        <div class="panel-title">
+          <h2>Most Popular Level <span>2026</span></h2>
+        </div>
+
+        <div class="featured-art">
+          <img src="./popularlevel.jpg" alt="GRIEF Geometry Dash level">
+        </div>
+
+        <p class="eyebrow">COMMUNITY SPOTLIGHT</p>
+        <h3>GRIEF</h3>
+        <p class="creator">by icedcave</p>
+
+        <div class="popular-description">
+          <span class="description-label">THE CURRENT #1 DEMON</span>
+
+          <p>
+            <strong>GRIEF</strong> is a new Geometry Dash Extreme Demon
+            <span class="description-highlight">10★</span> level hosted by
+            Icedcave, featuring a massive mega-collaboration.
+          </p>
+
+          <div class="verification-info">
+            <span>VERIFIED BY</span>
+            <strong>Doggie</strong>
+            <span class="verification-date">OCT 05, 2026</span>
+          </div>
+
+          <p>
+            Upon verification, GRIEF immediately claimed the
+            <strong>#1 position</strong> on the community Demonlist.
+            Currently, only <strong>3 players</strong> have managed to
+            complete it.
+          </p>
+        </div>
+
+        <div class="tags">
+          <span>10★</span>
+          <span>XL</span>
+          <span>Wave</span>
+          <span>Ship</span>
+        </div>
+      </section>
+
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 XYVER</span>
+    <span>Fan-made concept • Not affiliated with RobTop Games</span>
+  </footer>
+
+  <script src="players-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

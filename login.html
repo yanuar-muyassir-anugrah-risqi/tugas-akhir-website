@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Login | XYVER</title>
+  <link rel="stylesheet" href="styleLogin.css">
+  <link rel="icon" type="image/png" href="icon1.png">
+</head>
+
+<body>
+
+  <div class="login-box">
+
+    <div class="login-brand">
+  <img src="icon1.png" alt="XYVER Logo" class="brand-logo">
+
+  <div class="brand-copy">
+    <strong>XYVER</strong>
+    <small>GEOMETRY DASH COMMUNITY</small>
+  </div>
+</div>
+
+    <div class="login-divider"></div>
+
+    <h2>Welcome Back, <span>My Master</span></h2>
+    <p>Login to your XYVER account.</p>
+
+    <form id="login-form">
+
+      <label for="login-email">Username OR Email</label>
+      <input
+        type="text"
+        id="login-email"
+        placeholder="example@gmail.com"
+        autocomplete="email"
+        pattern="[a-zA-Z0-9._%+-]+@gmail.com"
+        required
+      >
+
+      <label for="login-password">Password</label>
+      <input
+        type="password"
+        id="login-password"
+        placeholder="Enter Password"
+      >
+
+      <div id="login-error"></div>
+      <div id="login-success"></div>
+
+      <button type="submit">Login</button>
+
+    </form>
+
+    <a href="index.html" class="back-home">
+      ← Back to Home
+    </a>
+
+  </div>
+
+  <script src="login.js"></script>
+
+</body>
+</html>
